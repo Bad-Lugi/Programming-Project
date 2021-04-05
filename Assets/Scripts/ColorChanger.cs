@@ -5,7 +5,7 @@ using UnityEngine;
 public class ColorChanger : MonoBehaviour
 {
     Material mat;
-    // Start is called before the first frame update
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.tag == "Color")
