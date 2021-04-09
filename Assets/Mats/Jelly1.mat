@@ -7,8 +7,9 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: PlayerColor4
-  m_Shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
+  m_Name: Jelly1
+  m_Shader: {fileID: -6465566751694194690, guid: f06e8f1ed86c97740b5dc1b026492e9f,
+    type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
@@ -55,7 +56,20 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _SpecGlossMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     m_Floats:
+    - Vector1_6053E588: 2.17
+    - Vector1_6D0C8C8C: 0.00025
+    - Vector1_7D4FCF4A: 0.005
+    - Vector1_9C15305B: 3
+    - Vector1_A6F3CBFE: 100
+    - Vector1_AC05F703: 0.1
+    - Vector1_CFE969C3: 0.65
+    - Vector1_EF70A129: 5
+    - Vector1_F8982B4F: -2.51
     - _BumpScale: 1
     - _Cutoff: 0.5
     - _DetailNormalMapScale: 1
@@ -73,5 +87,9 @@ Material:
     - _UVSec: 0
     - _ZWrite: 1
     m_Colors:
-    - _Color: {r: 0.003680706, g: 1, b: 0, a: 1}
+    - Color_CFEDBD4B: {r: 0.2216981, g: 0.8581307, b: 1, a: 0.61960787}
+    - Color_F41A8904: {r: 0.28123888, g: 0.28123888, b: 0.745283, a: 0}
+    - Color_FDC46C5F: {r: 0.25, g: 0.8462676, b: 1, a: 0.43137255}
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
+    - _SpecColor: {r: 0.2, g: 0.2, b: 0.2, a: 1}
