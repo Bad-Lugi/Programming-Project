@@ -15,11 +15,20 @@ public class StartingLine : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         Debug.Log(other.name);
-        playerOn = true;
+        if (!playerOn)
+        {
+            playerOn = true;
+            starter.playersWaiting++;
+        }
+        
     }
     private void OnTriggerExit(Collider other)
     {
         Debug.Log(other.name);
-        playerOn = false;
+        if (playerOn)
+        {
+            playerOn = false;
+            starter.playersWaiting--;
+        }
     }
 }

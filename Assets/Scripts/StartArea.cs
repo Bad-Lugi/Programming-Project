@@ -4,15 +4,14 @@ using UnityEngine;
 
 public class StartArea : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
+    public int playersWaiting;
+    public GameObject wall;
+    public int playersNeeded = 2;
     void Update()
     {
-        
+        if (playersWaiting >= playersNeeded)
+        {
+            wall.SetActive(false);
+        } 
     }
 }
