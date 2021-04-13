@@ -20,8 +20,10 @@ public class JellyMesh : MonoBehaviour
         renderer = GetComponent<MeshRenderer>();
         jv = new JellyVertex[MeshClone.vertices.Length];
         for (int i = 0; i < MeshClone.vertices.Length; i++)
-            jv[i] = new JellyVertex(i, transform.TransformPoint(MeshClone.vertices[i]));
+        jv[i] = new JellyVertex(i, transform.TransformPoint(MeshClone.vertices[i]));
+        Debug.Log(jv.Length);
     }
+   
 
     void FixedUpdate()
     {

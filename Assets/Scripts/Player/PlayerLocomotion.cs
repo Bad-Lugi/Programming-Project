@@ -9,7 +9,7 @@ public class PlayerLocomotion : MonoBehaviour
     public float jumpForce;
     private float moveInputX;
     private float moveInputZ;
-    //public ParticleSystem particle;
+    public JellyMesh jm;
 
     public Transform spawn;
 
@@ -29,6 +29,8 @@ public class PlayerLocomotion : MonoBehaviour
     private void Start()
     {
         rb = GetComponent<Rigidbody>();
+        spawn = GameObject.FindGameObjectWithTag("Spawn").transform;
+
     }
 
     private void FixedUpdate()
@@ -49,10 +51,11 @@ public class PlayerLocomotion : MonoBehaviour
         if (isGrounded == true)
         {
             extraJumps = extraJumpValue;
+
         }
         if (this.gameObject.transform.position.y < -10)
         {
-            this.gameObject.transform.position = spawn.position;
+            Death();
         }
     }
     public void Move(InputAction.CallbackContext context)
@@ -77,6 +80,19 @@ public class PlayerLocomotion : MonoBehaviour
         else if (context.performed && extraJumps == 0 && isGrounded == true)
         {
             rb.velocity = Vector3.up * jumpForce;
+        }
+    }
+    public void Death()
+    {
+        this.gameObject.transform.position = spawn.position;
+    }
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.tag.Equals("death"))
+        {
+            GetComponent<JellyMesh>().enabled = false;
+            Death();
+            GetComponent<JellyMesh>().enabled = true;
         }
     }
 }

@@ -6,7 +6,8 @@ public class StartingLine : MonoBehaviour
 {
     public StartArea starter;
     public bool playerOn;
-
+    public PlayerLocomotion pl;
+    public Transform spawn;
     void Start()
     {
         
@@ -17,6 +18,8 @@ public class StartingLine : MonoBehaviour
         Debug.Log(other.name);
         if (!playerOn)
         {
+            pl = other.GetComponent<PlayerLocomotion>();
+            pl.spawn = spawn;
             playerOn = true;
             starter.playersWaiting++;
         }

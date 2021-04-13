@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Color
   - SColor
+  - Spawn
+  - death
   layers:
   - Default
   - TransparentFX
