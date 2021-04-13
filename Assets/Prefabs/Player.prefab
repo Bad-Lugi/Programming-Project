@@ -283,6 +283,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   p1Mat: {fileID: 2100000, guid: 5d341d0a570eb6147ab60cc7f3aa7a76, type: 2}
+  p1SMat: {fileID: 2100000, guid: d131ca91518c1cf4f81023891e9a49c6, type: 2}
+  Solid: {fileID: 2100000, guid: bfe276b3f486c3b469a4f26432b2b524, type: 2}
 --- !u!65 &2839793400169461322
 BoxCollider:
   m_ObjectHideFlags: 0
