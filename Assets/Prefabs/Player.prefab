@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 170081463129452377}
   - component: {fileID: 170081463129452376}
   - component: {fileID: 6953732152787919389}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Main Camera
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -115,7 +115,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 170081463601668432}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: GroundCheck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -145,7 +145,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 170081463661641714}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: GroundCheck (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -179,13 +179,13 @@ GameObject:
   - component: {fileID: 6953732151583953945}
   - component: {fileID: 6953732151618676961}
   - component: {fileID: 6953732151618676960}
-  - component: {fileID: 2839793400169461322}
+  - component: {fileID: 8496725119896268418}
   - component: {fileID: 7534000688898542932}
   - component: {fileID: 3570415592899775102}
   - component: {fileID: 8311760377329662706}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -214,7 +214,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6953732151583953941}
-  m_Mesh: {fileID: 4493585093827132993, guid: ac626622b412d3642ae1a8b9f07b1162, type: 3}
+  m_Mesh: {fileID: 4493585093827132993, guid: e8a82a90b92caaa469b6c8df558ada09, type: 3}
 --- !u!23 &6953732151583953945
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -270,6 +270,7 @@ MonoBehaviour:
   Mass: 1
   Stiffness: 0.2
   Damping: 0.75
+  pl: {fileID: 8311760377329662706}
 --- !u!114 &6953732151618676960
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -285,8 +286,8 @@ MonoBehaviour:
   p1Mat: {fileID: 2100000, guid: 5d341d0a570eb6147ab60cc7f3aa7a76, type: 2}
   p1SMat: {fileID: 2100000, guid: d131ca91518c1cf4f81023891e9a49c6, type: 2}
   Solid: {fileID: 2100000, guid: bfe276b3f486c3b469a4f26432b2b524, type: 2}
---- !u!65 &2839793400169461322
-BoxCollider:
+--- !u!64 &8496725119896268418
+MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -295,9 +296,10 @@ BoxCollider:
   m_Material: {fileID: 13400000, guid: 0e2262be255b11c479580abede14fdfb, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.013333334, y: 0.013333334, z: 0.013333334}
-  m_Center: {x: 0, y: 0, z: 0}
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4493585093827132993, guid: e8a82a90b92caaa469b6c8df558ada09, type: 3}
 --- !u!54 &7534000688898542932
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -312,7 +314,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 112
+  m_Constraints: 116
   m_CollisionDetection: 0
 --- !u!114 &3570415592899775102
 MonoBehaviour:
@@ -431,6 +433,7 @@ MonoBehaviour:
   jumpForce: 5
   jm: {fileID: 6953732151618676961}
   spawn: {fileID: 0}
+  rb: {fileID: 0}
   groundCheck: {fileID: 170081463601668432}
   groundCheck2: {fileID: 170081463661641714}
   checkRadius: 0.2
@@ -438,3 +441,4 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 256
   extraJumpValue: 1
+  canMove: 1

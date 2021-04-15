@@ -8,6 +8,9 @@ TagManager:
   - SColor
   - Spawn
   - death
+  - Stuck
+  - canStick
+  - RGenManager
   layers:
   - Default
   - TransparentFX
@@ -18,10 +21,10 @@ TagManager:
   - 
   - 
   - Ground
-  - 
-  - 
-  - 
-  - 
+  - Walls
+  - Can Go Through Walls
+  - PlayerOnly
+  - Player
   - 
   - 
   - 

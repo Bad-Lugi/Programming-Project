@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-7782702145994333320
+--- !u!114 &-6709299974963924090
 MonoBehaviour:
   m_ObjectHideFlags: 11
   m_CorrespondingSourceObject: {fileID: 0}
@@ -20,7 +20,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: JellyP1
+  m_Name: JellyTrail Test
   m_Shader: {fileID: -6465566751694194690, guid: f06e8f1ed86c97740b5dc1b026492e9f,
     type: 3}
   m_ShaderKeywords: 
@@ -62,11 +62,11 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
-    - Vector1_6D0C8C8C: 0.00025
+    - Vector1_6D0C8C8C: 0.2
     - Vector1_7D4FCF4A: 0.005
     - Vector1_A6F3CBFE: 100
     - Vector1_AC05F703: 0.1
-    - Vector1_CFE969C3: 0.65
+    - Vector1_CFE969C3: 0.24
     - Vector1_F8982B4F: -2.51
     - _AlphaClip: 0
     - _Blend: 0
@@ -90,7 +90,7 @@ Material:
     - _WorkflowMode: 1
     - _ZWrite: 1
     m_Colors:
-    - Color_F41A8904: {r: 0.48235294, g: 0.07843135, b: 0.14966722, a: 0}
+    - Color_F41A8904: {r: 0.07716271, g: 0.07716271, b: 0.4811321, a: 0}
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}

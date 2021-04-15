@@ -1,14 +1,8 @@
 fileFormatVersion: 2
-guid: ac626622b412d3642ae1a8b9f07b1162
+guid: e8a82a90b92caaa469b6c8df558ada09
 ModelImporter:
   serializedVersion: 19301
-  internalIDToNameTable:
-  - first:
-      74: -8515560403302317629
-    second: Cube.001|Cube.001Action
-  - first:
-      74: -4064532029014869935
-    second: Cube.001|Cube.001Action.001
+  internalIDToNameTable: []
   externalObjects: {}
   materials:
     materialImportMode: 1
@@ -41,7 +35,7 @@ ModelImporter:
   meshes:
     lODScreenPercentages: []
     globalScale: 1
-    meshCompression: 0
+    meshCompression: 1
     addColliders: 0
     useSRGBMaterialColor: 1
     sortHierarchyByName: 1
