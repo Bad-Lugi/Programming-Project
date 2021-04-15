@@ -12,6 +12,7 @@ public class JellyMesh : MonoBehaviour
     private MeshRenderer renderer;
     private JellyVertex[] jv;
     private Vector3[] vertexArray;
+    public PlayerLocomotion pl;
     void Start()
     {
         OriginalMesh = GetComponent<MeshFilter>().sharedMesh;
@@ -20,7 +21,17 @@ public class JellyMesh : MonoBehaviour
         renderer = GetComponent<MeshRenderer>();
         jv = new JellyVertex[MeshClone.vertices.Length];
         for (int i = 0; i < MeshClone.vertices.Length; i++)
-            jv[i] = new JellyVertex(i, transform.TransformPoint(MeshClone.vertices[i]));
+        jv[i] = new JellyVertex(i, transform.TransformPoint(MeshClone.vertices[i]));
+        Debug.Log(jv.Length);
+
+    }
+       
+    public void spawn(Transform t)
+    {
+        for (int i = 0; i < jv.Length; i++)
+        {
+            jv[i].Position = t.position;
+        }
     }
 
     void FixedUpdate()
