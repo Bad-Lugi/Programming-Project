@@ -24,7 +24,7 @@ public class PlayerLocomotion : MonoBehaviour
     public LayerMask whatIsGround;
 
     private int extraJumps;
-    public int extraJumpValue;
+    public int extraJumpValue = 0;
     public bool canMove = true;
 
 
@@ -90,7 +90,7 @@ public class PlayerLocomotion : MonoBehaviour
     public void Death()
     {
         jm.spawn(spawn);
-        this.gameObject.transform.position = spawn.position;
+        this.gameObject.transform.position = spawn.position;;
     }
     private void OnCollisionEnter(Collision collision)
     {
