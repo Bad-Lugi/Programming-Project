@@ -420,7 +420,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 3815853958387230607}
-  m_RootOrder: 13
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &772982910562209037
 MonoBehaviour:
@@ -690,7 +690,9 @@ Transform:
   m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0.26000023, z: 7.5}
   m_LocalScale: {x: 0.10000005, y: 0.5, z: 6}
-  m_Children: []
+  m_Children:
+  - {fileID: 772982912130206648}
+  - {fileID: 772982912014976394}
   m_Father: {fileID: 3815853958387230607}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
@@ -2168,12 +2170,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 772982912014976395}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.5000007, y: 0.26000023, z: 7}
-  m_LocalScale: {x: 0.10000001, y: 0.5, z: 1}
+  m_LocalRotation: {x: -0, y: -0.7071068, z: -0, w: 0.7071068}
+  m_LocalPosition: {x: 5, y: 0, z: -0.25000018}
+  m_LocalScale: {x: 0.016666664, y: 1, z: 10}
   m_Children: []
-  m_Father: {fileID: 3815853958387230607}
-  m_RootOrder: 12
+  m_Father: {fileID: 772982910766785591}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &772982912014976439
 MeshFilter:
@@ -2261,12 +2263,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 772982912130206649}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.5000005, y: 0.26000023, z: 7}
-  m_LocalScale: {x: 0.10000001, y: 0.5, z: 1}
+  m_LocalRotation: {x: -0, y: -0.7071068, z: -0, w: 0.7071068}
+  m_LocalPosition: {x: 5, y: 0, z: 0.25000012}
+  m_LocalScale: {x: 0.016666664, y: 1, z: 10}
   m_Children: []
-  m_Father: {fileID: 3815853958387230607}
-  m_RootOrder: 11
+  m_Father: {fileID: 772982910766785591}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &772982912130206629
 MeshFilter:
@@ -2571,8 +2573,6 @@ Transform:
   - {fileID: 772982911032091325}
   - {fileID: 772982910900287406}
   - {fileID: 772982910766785591}
-  - {fileID: 772982912130206648}
-  - {fileID: 772982912014976394}
   - {fileID: 772982910562209036}
   m_Father: {fileID: 772982911540281497}
   m_RootOrder: 0

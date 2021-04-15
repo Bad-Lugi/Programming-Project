@@ -90,7 +90,7 @@ public class PlayerLocomotion : MonoBehaviour
     public void Death()
     {
         jm.spawn(spawn);
-        this.gameObject.transform.position = spawn.position;;
+        this.gameObject.transform.position = spawn.position;
     }
     private void OnCollisionEnter(Collision collision)
     {

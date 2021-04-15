@@ -11,6 +11,7 @@ TagManager:
   - Stuck
   - canStick
   - RGenManager
+  - Reset object
   layers:
   - Default
   - TransparentFX
