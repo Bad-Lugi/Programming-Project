@@ -105,5 +105,15 @@ public class PlayerLocomotion : MonoBehaviour
             
         }
     }
+    private void OnTriggerEnter(Collider collision)
+    {
+
+        if (collision.gameObject.tag.Equals("death"))
+        {
+
+            Death();
+
+        }
+    }
 
 }
