@@ -24,8 +24,9 @@ public class PlayerLocomotion : MonoBehaviour
     public LayerMask whatIsGround;
 
     private int extraJumps;
-    public int extraJumpValue;
+    public int extraJumpValue = 0;
     public bool canMove = true;
+    public bool canJump;
 
 
     private void Start()
@@ -70,27 +71,29 @@ public class PlayerLocomotion : MonoBehaviour
     }
     public void Jump(InputAction.CallbackContext context)
     {
-        if (context.performed && extraJumps > 0 && isGrounded == false)
+        if (canJump)
         {
-            //particle.Play();
-            rb.velocity = Vector3.up * jumpForce;
-            extraJumps--;
-        }
-        else if (context.performed && extraJumps > 0)
-        {
+            if (context.performed && extraJumps > 0 && isGrounded == false)
+            {
+                rb.velocity = Vector3.up * jumpForce;
+                extraJumps--;
+            }
+            else if (context.performed && extraJumps > 0)
+            {
 
-            rb.velocity = Vector3.up * jumpForce;
-            extraJumps--;
-        }
-        else if (context.performed && extraJumps == 0 && isGrounded == true)
-        {
-            rb.velocity = Vector3.up * jumpForce;
+                rb.velocity = Vector3.up * jumpForce;
+                extraJumps--;
+            }
+            else if (context.performed && extraJumps == 0 && isGrounded == true)
+            {
+                rb.velocity = Vector3.up * jumpForce;
+            }
         }
     }
     public void Death()
     {
         jm.spawn(spawn);
-        this.gameObject.transform.position = spawn.position;
+        this.gameObject.transform.position = spawn.position;;
     }
     private void OnCollisionEnter(Collision collision)
     {

@@ -11,5 +11,8 @@ public class RGen : MonoBehaviour
         rgm = GameObject.FindGameObjectWithTag("RGenManager").GetComponent<RGenManager>();
         if(rgm.numOfRooms < rgm.numofRoomsToLoad)
         Instantiate(rgm.getRoom(), transform.position, Quaternion.identity);
+        else
+        Instantiate(rgm.endRoom, transform.position, Quaternion.identity);
+
     }
 }

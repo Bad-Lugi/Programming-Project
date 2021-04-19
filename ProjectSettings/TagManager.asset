@@ -12,6 +12,9 @@ TagManager:
   - canStick
   - RGenManager
   - Reset object
+  - Left
+  - Right
+  - StartDialog
   layers:
   - Default
   - TransparentFX
