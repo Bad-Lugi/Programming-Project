@@ -5,6 +5,7 @@ using UnityEngine;
 public class RGenManager : MonoBehaviour
 {
     public GameObject[] rooms;
+    public GameObject endRoom;
     public int numOfRooms = 0;
     public int numofRoomsToLoad = 5;
     public GameObject getRoom()

@@ -4,25 +4,22 @@ using UnityEngine;
 
 public class EndLine : MonoBehaviour
 {
-    public GameObject left;
-    public GameObject right;
     public GameObject end;
     public bool leftside;
+    public GameObject[] platform;
+    ColorChanger cc;
+
 
     private void OnTriggerEnter(Collider other)
     {
+        
         if (other.gameObject.tag.Equals("Player"))
         {
-            if (leftside)
+            end.SetActive(false);
+            cc = other.GetComponent<ColorChanger>();
+            for (int i = 0; i < platform.Length; i++)
             {
-                left.SetActive(true);
-                end.SetActive(false);
-
-            }
-            if (!leftside)
-            {
-                right.SetActive(true);
-                end.SetActive(false);
+                platform[i].GetComponent<MeshRenderer>().material = cc.Solid;
             }
         }
     }

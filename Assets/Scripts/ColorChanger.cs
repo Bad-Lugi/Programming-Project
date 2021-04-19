@@ -16,6 +16,11 @@ public class ColorChanger : MonoBehaviour
             Solid = p1SMat;
 
             GameObject.FindGameObjectWithTag("MainCamera").SetActive(false);
+
+        }
+        else
+        {
+            GameObject.FindGameObjectWithTag("StartDialog").SetActive(false);
         }
     }
     private void OnTriggerEnter(Collider other)
