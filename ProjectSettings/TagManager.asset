@@ -5,6 +5,14 @@ TagManager:
   serializedVersion: 2
   tags:
   - Color
+  - SColor
+  - Spawn
+  - death
+  - RGenManager
+  - Reset object
+  - Left
+  - Right
+  - StartDialog
   layers:
   - Default
   - TransparentFX
@@ -15,10 +23,10 @@ TagManager:
   - 
   - 
   - Ground
-  - 
-  - 
-  - 
-  - 
+  - Walls
+  - Can Go Through Walls
+  - PlayerOnly
+  - Player
   - 
   - 
   - 

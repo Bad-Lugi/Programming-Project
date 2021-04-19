@@ -9,12 +9,12 @@ public class PlayerLocomotion : MonoBehaviour
     public float jumpForce;
     private float moveInputX;
     private float moveInputZ;
-    //public ParticleSystem particle;
+    public JellyMesh jm;
 
     public Transform spawn;
 
 
-    private Rigidbody rb;
+    public Rigidbody rb;
 
     private bool isGrounded;
     public Transform groundCheck;
@@ -24,11 +24,16 @@ public class PlayerLocomotion : MonoBehaviour
     public LayerMask whatIsGround;
 
     private int extraJumps;
-    public int extraJumpValue;
+    public int extraJumpValue = 0;
+    public bool canMove = true;
+    public bool canJump;
+
 
     private void Start()
     {
         rb = GetComponent<Rigidbody>();
+        spawn = GameObject.FindGameObjectWithTag("Spawn").transform;
+
     }
 
     private void FixedUpdate()
@@ -49,34 +54,56 @@ public class PlayerLocomotion : MonoBehaviour
         if (isGrounded == true)
         {
             extraJumps = extraJumpValue;
+
         }
         if (this.gameObject.transform.position.y < -10)
         {
-            this.gameObject.transform.position = spawn.position;
+            Death();
         }
     }
     public void Move(InputAction.CallbackContext context)
     {
-        moveInputX = context.ReadValue<Vector2>().x;
-        moveInputZ = context.ReadValue<Vector2>().y;
+        if (canMove)
+        {
+            moveInputX = context.ReadValue<Vector2>().x;
+            moveInputZ = context.ReadValue<Vector2>().y;
+        }
     }
     public void Jump(InputAction.CallbackContext context)
     {
-        if (context.performed && extraJumps > 0 && isGrounded == false)
+        if (canJump)
         {
-            //particle.Play();
-            rb.velocity = Vector3.up * jumpForce;
-            extraJumps--;
-        }
-        else if (context.performed && extraJumps > 0)
-        {
+            if (context.performed && extraJumps > 0 && isGrounded == false)
+            {
+                rb.velocity = Vector3.up * jumpForce;
+                extraJumps--;
+            }
+            else if (context.performed && extraJumps > 0)
+            {
 
-            rb.velocity = Vector3.up * jumpForce;
-            extraJumps--;
-        }
-        else if (context.performed && extraJumps == 0 && isGrounded == true)
-        {
-            rb.velocity = Vector3.up * jumpForce;
+                rb.velocity = Vector3.up * jumpForce;
+                extraJumps--;
+            }
+            else if (context.performed && extraJumps == 0 && isGrounded == true)
+            {
+                rb.velocity = Vector3.up * jumpForce;
+            }
         }
     }
+    public void Death()
+    {
+        jm.spawn(spawn);
+        this.gameObject.transform.position = spawn.position;;
+    }
+    private void OnCollisionEnter(Collision collision)
+    {
+
+        if (collision.gameObject.tag.Equals("death"))
+        {
+            
+            Death();
+            
+        }
+    }
+
 }
