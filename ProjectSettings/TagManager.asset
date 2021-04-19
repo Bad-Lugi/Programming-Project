@@ -8,8 +8,6 @@ TagManager:
   - SColor
   - Spawn
   - death
-  - Stuck
-  - canStick
   - RGenManager
   - Reset object
   - Left
