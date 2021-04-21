@@ -8,6 +8,8 @@ public class PlayerLocomotion : MonoBehaviour
     [Header("Player Variables")]
     public float speed;
     public JellyMesh jm;
+    public AudioSource audioS;
+    public AudioClip[] clips;
     
     [Header("World Stuff")]
     public Transform spawn;
@@ -20,11 +22,11 @@ public class PlayerLocomotion : MonoBehaviour
     private float moveInputZ;
 
 
+
     private void Start()
     {
         rb = GetComponent<Rigidbody>();
         spawn = GameObject.FindGameObjectWithTag("Spawn").transform;
-
     }
     
     private void FixedUpdate()
@@ -40,11 +42,13 @@ public class PlayerLocomotion : MonoBehaviour
     public void Death()
     {
         jm.spawn(spawn);
-        this.gameObject.transform.position = spawn.position;;
+        this.gameObject.transform.position = spawn.position;
+
     }
     private void OnCollisionEnter(Collision collision)
     {
-
+        audioS.Play();
+        audioS.clip = clips[Random.Range(0, clips.Length)];
         if (collision.gameObject.tag.Equals("death"))
         {
             
