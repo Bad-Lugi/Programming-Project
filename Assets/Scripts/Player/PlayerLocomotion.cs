@@ -1,12 +1,13 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
 public class PlayerLocomotion : MonoBehaviour
 {
-    [Header("Player Locomotion Variables")]
+    [Header("Player Variables")]
     public float speed;
+    public JellyMesh jm;
     
     [Header("World Stuff")]
     public Transform spawn;
@@ -17,7 +18,6 @@ public class PlayerLocomotion : MonoBehaviour
     //Move Input
     private float moveInputX;
     private float moveInputZ;
-    public JellyMesh jm;
 
 
     private void Start()

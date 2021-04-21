@@ -1,19 +1,22 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class ColorChanger : MonoBehaviour
 {
-    Material mat;
-    public Material p1Mat;
-    public Material p1SMat;
-    public Material Solid;
+    [Header("Materials")]
+    public Material PlayerOneMaterial;
+    public Material PlayerOneSolidMaterial;
+    public Material CurrentSolidColor;
+
+    //PlaceHolder Material
+    private Material mat;
     private void Awake()
     {
         if(GameObject.FindGameObjectsWithTag("Player").Length <= 1)
         {
-            this.GetComponent<MeshRenderer>().material = p1Mat;
-            Solid = p1SMat;
+            this.GetComponent<MeshRenderer>().material = PlayerOneMaterial;
+         CurrentSolidColor = PlayerOneSolidMaterial;
 
             GameObject.FindGameObjectWithTag("MainCamera").SetActive(false);
 
@@ -33,8 +36,8 @@ public class ColorChanger : MonoBehaviour
         }
         if (other.tag == "SColor")
         {
-            mat = Solid;
-            Solid = other.GetComponent<MeshRenderer>().material;
+            mat = CurrentSolidColor;
+         CurrentSolidColor = other.GetComponent<MeshRenderer>().material;
             other.GetComponent<MeshRenderer>().material = mat;
         }
 
