@@ -60,6 +60,7 @@ crashlytics-build.properties
 
 # Custom folder ignore
 Assets/Graphics/
+Assets/DungeonArchitect*/
 
 #Ignore relevant META files
 Assets/Graphics.meta

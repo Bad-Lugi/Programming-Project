@@ -17,11 +17,14 @@ public class PlayerLocomotion : MonoBehaviour
     //Move Input
     private float moveInputX;
     private float moveInputZ;
+    public JellyMesh jm;
 
 
     private void Start()
     {
         rb = GetComponent<Rigidbody>();
+        spawn = GameObject.FindGameObjectWithTag("Spawn").transform;
+
     }
     
     private void FixedUpdate()
@@ -31,7 +34,36 @@ public class PlayerLocomotion : MonoBehaviour
     
     public void Move(InputAction.CallbackContext context)
     {
-        moveInputX = context.ReadValue<Vector2>().x;
-        moveInputZ = context.ReadValue<Vector2>().y;
+        if (canMove)
+        {
+            moveInputX = context.ReadValue<Vector2>().x;
+            moveInputZ = context.ReadValue<Vector2>().y;
+        }
     }
+    public void Death()
+    {
+        jm.spawn(spawn);
+        this.gameObject.transform.position = spawn.position;;
+    }
+    private void OnCollisionEnter(Collision collision)
+    {
+
+        if (collision.gameObject.tag.Equals("death"))
+        {
+            
+            Death();
+            
+        }
+    }
+    private void OnTriggerEnter(Collider collision)
+    {
+
+        if (collision.gameObject.tag.Equals("death"))
+        {
+
+            Death();
+
+        }
+    }
+
 }
