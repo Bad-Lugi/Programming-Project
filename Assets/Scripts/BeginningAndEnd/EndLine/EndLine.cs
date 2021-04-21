@@ -19,7 +19,7 @@ public class EndLine : MonoBehaviour
             cc = other.GetComponent<ColorChanger>();
             for (int i = 0; i < platform.Length; i++)
             {
-                platform[i].GetComponent<MeshRenderer>().material = cc.Solid;
+                platform[i].GetComponent<MeshRenderer>().material = cc.CurrentSolidColor;
             }
         }
     }

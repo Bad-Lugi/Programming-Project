@@ -34,11 +34,8 @@ public class PlayerLocomotion : MonoBehaviour
     
     public void Move(InputAction.CallbackContext context)
     {
-        if (canMove)
-        {
             moveInputX = context.ReadValue<Vector2>().x;
             moveInputZ = context.ReadValue<Vector2>().y;
-        }
     }
     public void Death()
     {
