@@ -11,6 +11,7 @@ public class MusicPlayer : MonoBehaviour
 
     void Start()
     {
+        AudioSource = GameObject.FindGameObjectWithTag("Music").GetComponent<AudioSource>();
         AudioSource.Play();
     }
 

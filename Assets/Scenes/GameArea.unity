@@ -534,7 +534,7 @@ MonoBehaviour:
   - {fileID: 8444237353951384967, guid: de673a640fcf91a469af75f3c9c39ced, type: 3}
   endRoom: {fileID: 1291424984120307827, guid: 31cc2c779daa0dc45ab85f63f8bfc0b0, type: 3}
   numOfRooms: 0
-  numofRoomsToLoad: 5
+  numofRoomsToLoad: 0
 --- !u!4 &247145356
 Transform:
   m_ObjectHideFlags: 0

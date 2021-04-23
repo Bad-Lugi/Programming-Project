@@ -13,6 +13,8 @@ TagManager:
   - Left
   - Right
   - StartDialog
+  - Music
+  - Mplayer
   layers:
   - Default
   - TransparentFX

@@ -16,6 +16,7 @@ public class PlayerLocomotion : MonoBehaviour
     
     //Privately assighned variables
     private Rigidbody rb;
+    private GameObject audiolistner;
     
     //Move Input
     private float moveInputX;
@@ -27,6 +28,7 @@ public class PlayerLocomotion : MonoBehaviour
     {
         rb = GetComponent<Rigidbody>();
         spawn = GameObject.FindGameObjectWithTag("Spawn").transform;
+        audiolistner = spawn.gameObject;
     }
     
     private void FixedUpdate()
@@ -47,8 +49,9 @@ public class PlayerLocomotion : MonoBehaviour
     }
     private void OnCollisionEnter(Collision collision)
     {
-        audioS.Play();
+        audiolistner.transform.position = this.transform.position;
         audioS.clip = clips[Random.Range(0, clips.Length)];
+        audioS.Play();
         if (collision.gameObject.tag.Equals("death"))
         {
             
