@@ -532,6 +532,7 @@ MonoBehaviour:
   - {fileID: 2699568896730897866, guid: b180efe46b088514b8edcd965460d4c9, type: 3}
   - {fileID: 7131134001542702263, guid: 763f1e29a273034429695cf8555a894c, type: 3}
   - {fileID: 8444237353951384967, guid: de673a640fcf91a469af75f3c9c39ced, type: 3}
+  - {fileID: 221363295093852049, guid: 8e9fac8e537387443b4eabd571aa32f9, type: 3}
   endRoom: {fileID: 1291424984120307827, guid: 31cc2c779daa0dc45ab85f63f8bfc0b0, type: 3}
   numOfRooms: 0
   numofRoomsToLoad: 5
