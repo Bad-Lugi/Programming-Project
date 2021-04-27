@@ -23,7 +23,7 @@ RenderSettings:
   m_AmbientSkyColor: {r: 0.212, g: 0.227, b: 0.259, a: 1}
   m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}
   m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
-  m_AmbientIntensity: 1
+  m_AmbientIntensity: 1.5
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
   m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641424, b: 0.5748196, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657832, g: 0.4964139, b: 0.57481974, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -96,8 +96,8 @@ LightmapSettings:
     m_PVRFilteringAtrousPositionSigmaAO: 1
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
-    m_LightProbeSampleCountMultiplier: 4
-  m_LightingDataAsset: {fileID: 112000000, guid: 1175e5edb204a7f409f8cd2410119998,
+    m_LightProbeSampleCountMultiplier: 5
+  m_LightingDataAsset: {fileID: 112000000, guid: 95c0485881ec144498ce8486d8f68a70,
     type: 2}
   m_UseShadowmask: 0
 --- !u!196 &4
@@ -531,6 +531,8 @@ MonoBehaviour:
   - {fileID: 772982911540281498, guid: 143daa54dfead3047ac75239b24b3a13, type: 3}
   - {fileID: 2699568896730897866, guid: b180efe46b088514b8edcd965460d4c9, type: 3}
   - {fileID: 7131134001542702263, guid: 763f1e29a273034429695cf8555a894c, type: 3}
+  - {fileID: 8444237353951384967, guid: de673a640fcf91a469af75f3c9c39ced, type: 3}
+  - {fileID: 221363295093852049, guid: 8e9fac8e537387443b4eabd571aa32f9, type: 3}
   endRoom: {fileID: 1291424984120307827, guid: 31cc2c779daa0dc45ab85f63f8bfc0b0, type: 3}
   numOfRooms: 0
   numofRoomsToLoad: 5

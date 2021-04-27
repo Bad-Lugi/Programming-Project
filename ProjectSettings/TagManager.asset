@@ -8,13 +8,13 @@ TagManager:
   - SColor
   - Spawn
   - death
-  - Stuck
-  - canStick
   - RGenManager
   - Reset object
   - Left
   - Right
   - StartDialog
+  - Music
+  - Mplayer
   layers:
   - Default
   - TransparentFX
