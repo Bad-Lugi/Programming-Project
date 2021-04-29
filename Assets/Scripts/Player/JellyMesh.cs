@@ -9,7 +9,7 @@ public class JellyMesh : MonoBehaviour
     public float Stiffness = 1f;
     public float Damping = 0.75f;
     private Mesh OriginalMesh, MeshClone;
-    private new MeshRenderer renderer;
+    private MeshRenderer renderer;
     private JellyVertex[] jv;
     private Vector3[] vertexArray;
     public PlayerLocomotion pl;
