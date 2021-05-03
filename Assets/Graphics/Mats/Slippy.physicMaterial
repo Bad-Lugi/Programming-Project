@@ -6,8 +6,8 @@ PhysicMaterial:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Slippery
-  dynamicFriction: 0
+  m_Name: Slippy
+  dynamicFriction: 0.0025
   staticFriction: 0
   bounciness: 0
   frictionCombine: 0

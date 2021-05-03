@@ -8,10 +8,7 @@ public class StartingLine : MonoBehaviour
     public bool playerOn;
     public PlayerLocomotion pl;
     public Transform spawn;
-    void Start()
-    {
-        
-    }
+
 
     private void OnTriggerEnter(Collider other)
     {

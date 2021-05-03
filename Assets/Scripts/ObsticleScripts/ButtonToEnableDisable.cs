@@ -6,24 +6,16 @@ public class ButtonToEnableDisable : MonoBehaviour
 {
     public GameObject gObject;
     public bool enable = true;
-    public Material enablecolor;
-    public Material dissablecolor;
 
-    private void OnEnable()
-    {
-        if(enable)
-        this.gameObject.GetComponent<MeshRenderer>().material = enablecolor;
-        if(!enable)
-        this.gameObject.GetComponent<MeshRenderer>().material = dissablecolor;
-    }
+  
     private void OnTriggerEnter(Collider other)
     {
         Debug.Log(other.gameObject);
-        if (enable && other.tag.Equals("Player"))
+        if (enable && other.tag.Equals("Player") || other.tag.Equals("Player2"))
         {
             gObject.SetActive(true);
         }
-        else if (!enable && other.tag.Equals("Player"))
+        else if (!enable && other.tag.Equals("Player") || other.tag.Equals("Player2"))
         {
             gObject.SetActive(false);
         }

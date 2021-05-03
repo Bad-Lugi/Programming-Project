@@ -20,9 +20,7 @@ public class ColorChanger : MonoBehaviour
          CurrentSolidColor = PlayerOneSolidMaterial;
             this.GetComponentInChildren<ParticleSystemRenderer>().material = PlayerOneParticleMaterial;
 
-
             GameObject.FindGameObjectWithTag("MainCamera").SetActive(false);
-
         }
         else
         {

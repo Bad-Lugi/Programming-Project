@@ -36,8 +36,14 @@ public class PlayerLocomotion : MonoBehaviour
     
     private void FixedUpdate()
     {
-        if(canMove)
-            rb.velocity = new Vector3(moveInputX * speed, rb.velocity.y,moveInputZ*speed);
+        if (canMove)
+        {
+            rb.velocity = new Vector3(moveInputX * speed, rb.velocity.y, moveInputZ * speed);
+        }
+        else
+        {
+            rb.velocity = new Vector3(0, 0, 0);
+        }
     }
     
     public void Move(InputAction.CallbackContext context)

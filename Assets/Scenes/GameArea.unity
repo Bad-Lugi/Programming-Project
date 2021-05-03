@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657832, g: 0.4964139, b: 0.57481974, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641424, b: 0.5748196, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -624,13 +624,26 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rooms:
   - {fileID: 772982911540281498, guid: 143daa54dfead3047ac75239b24b3a13, type: 3}
+  - {fileID: 772982911540281498, guid: 1622459e8fb4ed1468968c7dc46467d2, type: 3}
   - {fileID: 2699568896730897866, guid: b180efe46b088514b8edcd965460d4c9, type: 3}
+  - {fileID: 2699568896730897866, guid: 7a3647941979d7c499e3f1bd15b09b97, type: 3}
   - {fileID: 7131134001542702263, guid: 763f1e29a273034429695cf8555a894c, type: 3}
+  - {fileID: 7131134001542702263, guid: 4638ecae52efe7f4894c3fd751b5a5c0, type: 3}
   - {fileID: 8444237353951384967, guid: de673a640fcf91a469af75f3c9c39ced, type: 3}
+  - {fileID: 8444237353951384967, guid: 9de3ee403fd20b04c8248597a1bce30c, type: 3}
   - {fileID: 221363295093852049, guid: 8e9fac8e537387443b4eabd571aa32f9, type: 3}
+  - {fileID: 221363295093852049, guid: 246569101358bd643a8c0e7037693541, type: 3}
+  - {fileID: 6904261136950872371, guid: b77b0106508f3f246b9c65e435913189, type: 3}
+  - {fileID: 6904261136950872371, guid: 59fedef2810a16b47b09399f12f02743, type: 3}
+  - {fileID: 3382627377165670344, guid: 594efa434f1c6af40ac467253ed18a45, type: 3}
+  - {fileID: 3382627377165670344, guid: c48b29d3b20b1724b897cca61455d02f, type: 3}
+  - {fileID: 4299773505890882179, guid: c682fca927f21404d89f7d15ef366677, type: 3}
+  - {fileID: 2530400513882132708, guid: 1590ae6095c48254a846e5292f41961b, type: 3}
+  - {fileID: 3674465914449499683, guid: fecce2817f2be234aabca3570b218817, type: 3}
+  - {fileID: 7199111252027876979, guid: aa828401a5451104a92249ccd9f47f75, type: 3}
   endRoom: {fileID: 1291424984120307827, guid: 31cc2c779daa0dc45ab85f63f8bfc0b0, type: 3}
   numOfRooms: 0
-  numofRoomsToLoad: 5
+  numofRoomsToLoad: 7
 --- !u!4 &247145356
 Transform:
   m_ObjectHideFlags: 0
@@ -2341,6 +2354,7 @@ GameObject:
   - component: {fileID: 1041801478}
   - component: {fileID: 1041801477}
   - component: {fileID: 1041801476}
+  - component: {fileID: 1041801479}
   m_Layer: 0
   m_Name: StartingLine Right
   m_TagString: Untagged
@@ -2393,6 +2407,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1041801479
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1041801475}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a31242492d07e504ab553879862fae34, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerOn: 0
 --- !u!1 &1106980742
 GameObject:
   m_ObjectHideFlags: 0
