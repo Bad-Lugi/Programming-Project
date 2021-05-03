@@ -13,7 +13,7 @@ public class EndLine : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         
-        if (other.gameObject.tag.Equals("Player"))
+        if (other.gameObject.tag.Equals("Player") || other.gameObject.tag.Equals("Player2"))
         {
             end.SetActive(false);
             cc = other.GetComponent<ColorChanger>();

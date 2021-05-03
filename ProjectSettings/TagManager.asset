@@ -15,6 +15,8 @@ TagManager:
   - StartDialog
   - Music
   - Mplayer
+  - PColor
+  - Player2
   layers:
   - Default
   - TransparentFX
@@ -29,9 +31,9 @@ TagManager:
   - Can Go Through Walls
   - PlayerOnly
   - Player
-  - 
-  - 
-  - 
+  - Player2
+  - Player2Only
+  - Both Player Only
   - 
   - 
   - 

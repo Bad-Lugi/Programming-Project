@@ -322,6 +322,8 @@ MonoBehaviour:
   PlayerOneMaterial: {fileID: 2100000, guid: 5d341d0a570eb6147ab60cc7f3aa7a76, type: 2}
   PlayerOneSolidMaterial: {fileID: 2100000, guid: d131ca91518c1cf4f81023891e9a49c6,
     type: 2}
+  PlayerOneParticleMaterial: {fileID: 2100000, guid: e3d11660571f3824a877f6494f21f6dc,
+    type: 2}
   CurrentSolidColor: {fileID: 2100000, guid: bfe276b3f486c3b469a4f26432b2b524, type: 2}
 --- !u!114 &8311760377329662706
 MonoBehaviour:
@@ -348,6 +350,8 @@ MonoBehaviour:
   - {fileID: 8300000, guid: bc4bf893a73fe004bb1453729e4bf2a1, type: 3}
   - {fileID: 8300000, guid: aa9ad06bd0a17e5488ebc43e88cf42f6, type: 3}
   spawn: {fileID: 0}
+  particles: {fileID: 7512099603805673710}
+  canMove: 1
 --- !u!114 &3570415592899775102
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -456,7 +460,7 @@ MeshCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6953732151583953941}
-  m_Material: {fileID: 13400000, guid: 0e2262be255b11c479580abede14fdfb, type: 2}
+  m_Material: {fileID: 13400000, guid: e581ddf9833fbde43b07237c865bd262, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 4
@@ -490,6 +494,7 @@ GameObject:
   - component: {fileID: 1476832244722144332}
   - component: {fileID: 7632649499481255508}
   - component: {fileID: 7152530625294192223}
+  - component: {fileID: 782990272442642185}
   m_Layer: 12
   m_Name: PopParticles
   m_TagString: Untagged
@@ -521,13 +526,13 @@ ParticleSystem:
   serializedVersion: 6
   lengthInSec: 0.05
   simulationSpeed: 1
-  stopAction: 0
+  stopAction: 3
   cullingMode: 0
   ringBufferMode: 0
   ringBufferLoopRange: {x: 0, y: 1}
   looping: 0
   prewarm: 0
-  playOnAwake: 1
+  playOnAwake: 0
   useUnscaledTime: 0
   autoRandomSeed: 1
   useRigidbodyForVelocity: 1
@@ -646,9 +651,9 @@ ParticleSystem:
         m_RotationOrder: 4
     startSpeed:
       serializedVersion: 2
-      minMaxState: 0
-      scalar: 10
-      minScalar: 5
+      minMaxState: 3
+      scalar: 6
+      minScalar: 0.5
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -763,7 +768,7 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 1
+      scalar: 0.5
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -921,8 +926,8 @@ ParticleSystem:
         m_RotationOrder: 4
     startRotationX:
       serializedVersion: 2
-      minMaxState: 0
-      scalar: 0
+      minMaxState: 3
+      scalar: 3.1415927
       minScalar: 0
       maxCurve:
         serializedVersion: 2
@@ -974,8 +979,8 @@ ParticleSystem:
         m_RotationOrder: 4
     startRotationY:
       serializedVersion: 2
-      minMaxState: 0
-      scalar: 0
+      minMaxState: 3
+      scalar: 3.1415927
       minScalar: 0
       maxCurve:
         serializedVersion: 2
@@ -1027,8 +1032,8 @@ ParticleSystem:
         m_RotationOrder: 4
     startRotation:
       serializedVersion: 2
-      minMaxState: 0
-      scalar: 0
+      minMaxState: 3
+      scalar: 6.283185
       minScalar: 0
       maxCurve:
         serializedVersion: 2
@@ -4156,7 +4161,7 @@ ParticleSystem:
     m_EnergyLossOnCollision:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0
+      scalar: 1
       minScalar: 0
       maxCurve:
         serializedVersion: 2
@@ -5233,3 +5238,16 @@ ParticleSystemRenderer:
   m_Mesh2: {fileID: 0}
   m_Mesh3: {fileID: 0}
   m_MaskInteraction: 0
+--- !u!114 &782990272442642185
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7512099603805673710}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e31fc648197353a47866cdb4e0955c05, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pl: {fileID: 8311760377329662706}

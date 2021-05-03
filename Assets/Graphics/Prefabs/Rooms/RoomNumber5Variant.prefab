@@ -335,7 +335,7 @@ GameObject:
   m_Component:
   - component: {fileID: 221363295093852050}
   m_Layer: 0
-  m_Name: RoomNumber5
+  m_Name: RoomNumber5Variant
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1505,7 +1505,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &3431783487361480485
 Transform:
   m_ObjectHideFlags: 0
@@ -2218,7 +2218,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &7339125614104511740
 Transform:
   m_ObjectHideFlags: 0
@@ -3303,7 +3303,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &9154242089203557493
 Transform:
   m_ObjectHideFlags: 0
@@ -3428,7 +3428,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &3720229958314421954
 Transform:
   m_ObjectHideFlags: 0
