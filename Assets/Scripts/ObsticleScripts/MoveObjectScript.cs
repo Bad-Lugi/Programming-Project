@@ -5,9 +5,10 @@ using UnityEngine;
 public class MoveObjectScript : MonoBehaviour
 {
     public Pose pos;
+
     private void Awake()
     {
-        pos.position = transform.position;
+        pos.position = this.transform.position;
     }
     private void OnCollisionEnter(Collision collision)
     {
