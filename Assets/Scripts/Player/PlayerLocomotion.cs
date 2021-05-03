@@ -10,9 +10,12 @@ public class PlayerLocomotion : MonoBehaviour
     public JellyMesh jm;
     public AudioSource audioS;
     public AudioClip[] clips;
+
     
     [Header("World Stuff")]
     public Transform spawn;
+    public GameObject particles;
+    public bool canMove = true;
     
     //Privately assighned variables
     private Rigidbody rb;
@@ -33,19 +36,32 @@ public class PlayerLocomotion : MonoBehaviour
     
     private void FixedUpdate()
     {
-        rb.velocity = new Vector3(moveInputX * speed, rb.velocity.y,moveInputZ*speed);
+        if(canMove)
+            rb.velocity = new Vector3(moveInputX * speed, rb.velocity.y,moveInputZ*speed);
     }
     
     public void Move(InputAction.CallbackContext context)
     {
             moveInputX = context.ReadValue<Vector2>().x;
             moveInputZ = context.ReadValue<Vector2>().y;
+
+        
+        
     }
     public void Death()
     {
+        canMove = false;
+        this.GetComponent<MeshRenderer>().enabled = false;
+        this.GetComponent<MeshCollider>().enabled = false;
+        this.GetComponentInChildren<ParticleSystem>().Play();
+    }
+    public void Respawn()
+    {
         jm.spawn(spawn);
         this.gameObject.transform.position = spawn.position;
-
+        canMove = true;
+        this.GetComponent<MeshRenderer>().enabled = true;
+        this.GetComponent<MeshCollider>().enabled = true;
     }
     private void OnCollisionEnter(Collision collision)
     {

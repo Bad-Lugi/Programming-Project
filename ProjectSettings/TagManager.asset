@@ -15,6 +15,7 @@ TagManager:
   - StartDialog
   - Music
   - Mplayer
+  - PColor
   layers:
   - Default
   - TransparentFX
