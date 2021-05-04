@@ -18,7 +18,12 @@ public class ColorChanger : MonoBehaviour
         {
             this.GetComponent<MeshRenderer>().material = PlayerOneMaterial;
          CurrentSolidColor = PlayerOneSolidMaterial;
-            this.GetComponentInChildren<ParticleSystemRenderer>().material = PlayerOneParticleMaterial;
+            for (int i = 0; i < GetComponentsInChildren<ParticleSystemRenderer>().Length; i++)
+            {
+                this.GetComponentsInChildren<ParticleSystemRenderer>()[i].material = PlayerOneParticleMaterial;
+ 
+            }
+            
 
             GameObject.FindGameObjectWithTag("MainCamera").SetActive(false);
         }
@@ -44,7 +49,10 @@ public class ColorChanger : MonoBehaviour
         if (other.tag == "PColor")
         {
             mat = this.GetComponentInChildren<ParticleSystemRenderer>().material;
-            this.GetComponentInChildren<ParticleSystemRenderer>().material = other.GetComponent<MeshRenderer>().material;
+            for(int i = 0; i < GetComponentsInChildren<ParticleSystemRenderer>().Length; i++)
+            {
+                GetComponentsInChildren<ParticleSystemRenderer>()[i].material = other.GetComponent<MeshRenderer>().material;
+            }
             other.GetComponent<MeshRenderer>().material = mat;
         }
 

@@ -10,6 +10,10 @@ public class PlayerLocomotion : MonoBehaviour
     public JellyMesh jm;
     public AudioSource audioS;
     public AudioClip[] clips;
+    public float boost;
+    public int boosts = 3;
+    public float boostvalue = 2;
+    public ParticleSystem BoostParticles;
 
     
     [Header("World Stuff")]
@@ -32,13 +36,19 @@ public class PlayerLocomotion : MonoBehaviour
         rb = GetComponent<Rigidbody>();
         spawn = GameObject.FindGameObjectWithTag("Spawn").transform;
         audiolistner = spawn.gameObject;
+        boosts = 3;
+        var emission = BoostParticles.emission;
+        emission.rateOverTime = 25 * boosts;
     }
     
     private void FixedUpdate()
     {
+
         if (canMove)
         {
-            rb.velocity = new Vector3(moveInputX * speed, rb.velocity.y, moveInputZ * speed);
+            rb.velocity = new Vector3(moveInputX * speed * boost, rb.velocity.y, moveInputZ * speed * boost);
+            if(boost > 1)
+                boost -= 0.1f;
         }
         else
         {
@@ -50,8 +60,16 @@ public class PlayerLocomotion : MonoBehaviour
     {
             moveInputX = context.ReadValue<Vector2>().x;
             moveInputZ = context.ReadValue<Vector2>().y;
-
-        
+    }
+    public void Boost(InputAction.CallbackContext context)
+    {
+        if(context.performed == true && boosts > 0)
+        {
+            boost = boostvalue;
+            boosts--;
+            var emission = BoostParticles.emission;
+            emission.rateOverTime = 25 * boosts;
+        }
         
     }
     public void Death()
