@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -8,9 +8,10 @@ public class StartArea : MonoBehaviour
     public GameObject wall;
     public GameObject Cage;
     public int playersNeeded = 2;
+    public bool Started = false;
     void Update()
     {
-        if (playersWaiting >= playersNeeded)
+        if (playersWaiting >= playersNeeded && Started = false)
         {
             wall.SetActive(false);
             Cage.SetActive(true);
@@ -20,6 +21,7 @@ public class StartArea : MonoBehaviour
                 GameObject.FindGameObjectsWithTag("Player")[i].GetComponent<PlayerLocomotion>().boosts = 3;
                 GameObject.FindGameObjectsWithTag("Player")[i].GetComponent<PlayerLocomotion>().UpdateTrail();
             }
+            Started = true;
         } 
     }
 }

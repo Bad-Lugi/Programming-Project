@@ -89,6 +89,8 @@ public class PlayerLocomotion : MonoBehaviour
         canMove = true;
         this.GetComponent<MeshRenderer>().enabled = true;
         this.GetComponent<MeshCollider>().enabled = true;
+        boosts = 3;
+        UpdateTrail();
     }
     private void OnCollisionEnter(Collision collision)
     {
