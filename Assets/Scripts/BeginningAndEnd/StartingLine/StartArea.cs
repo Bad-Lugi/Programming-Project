@@ -14,6 +14,12 @@ public class StartArea : MonoBehaviour
         {
             wall.SetActive(false);
             Cage.SetActive(true);
+
+            for(int i = 0; i<GameObject.FindGameObjectsWithTag("Player").Length; i++)
+            {
+                GameObject.FindGameObjectsWithTag("Player")[i].GetComponent<PlayerLocomotion>().boosts = 3;
+                GameObject.FindGameObjectsWithTag("Player")[i].GetComponent<PlayerLocomotion>().UpdateTrail();
+            }
         } 
     }
 }

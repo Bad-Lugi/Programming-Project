@@ -37,8 +37,7 @@ public class PlayerLocomotion : MonoBehaviour
         spawn = GameObject.FindGameObjectWithTag("Spawn").transform;
         audiolistner = spawn.gameObject;
         boosts = 3;
-        var emission = BoostParticles.emission;
-        emission.rateOverTime = 25 * boosts;
+        UpdateTrail();
     }
     
     private void FixedUpdate()
@@ -67,10 +66,14 @@ public class PlayerLocomotion : MonoBehaviour
         {
             boost = boostvalue;
             boosts--;
-            var emission = BoostParticles.emission;
-            emission.rateOverTime = 25 * boosts;
+            UpdateTrail();
         }
         
+    }
+    public void UpdateTrail()
+    {
+        var emission = BoostParticles.emission;
+        emission.rateOverTime = 25 * boosts;
     }
     public void Death()
     {

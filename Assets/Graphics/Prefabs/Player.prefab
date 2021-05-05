@@ -5120,7 +5120,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: aa9ad06bd0a17e5488ebc43e88cf42f6, type: 3}
   boost: 2.5
   boosts: 0
-  boostvalue: 2.5
+  boostvalue: 2.75
   BoostParticles: {fileID: 1193243103516527209}
   spawn: {fileID: 0}
   particles: {fileID: 7512099603805673710}
