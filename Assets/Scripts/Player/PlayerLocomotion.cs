@@ -48,6 +48,8 @@ public class PlayerLocomotion : MonoBehaviour
             rb.velocity = new Vector3(moveInputX * speed * boost, rb.velocity.y, moveInputZ * speed * boost);
             if(boost > 1)
                 boost -= 0.1f;
+            if (rb.mass > 2)
+                rb.mass -= 0.1f;
         }
         else
         {
@@ -64,6 +66,7 @@ public class PlayerLocomotion : MonoBehaviour
     {
         if(context.performed == true && boosts > 0)
         {
+            rb.mass = 5;
             boost = boostvalue;
             boosts--;
             UpdateTrail();

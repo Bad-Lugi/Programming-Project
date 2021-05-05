@@ -2830,7 +2830,7 @@ GameObject:
   - component: {fileID: 7309791287470512292}
   - component: {fileID: 7410509987111750477}
   - component: {fileID: 8330659302574173520}
-  m_Layer: 11
+  m_Layer: 15
   m_Name: Left Front Block (2)
   m_TagString: Reset object
   m_Icon: {fileID: 0}
@@ -2968,7 +2968,7 @@ GameObject:
   - component: {fileID: 2008843594957085642}
   - component: {fileID: 6457967182628223794}
   - component: {fileID: 5662790393098417615}
-  m_Layer: 11
+  m_Layer: 15
   m_Name: Left Front Block (3)
   m_TagString: Reset object
   m_Icon: {fileID: 0}
