@@ -11,17 +11,20 @@ public class StartArea : MonoBehaviour
     public bool Started = false;
     void Update()
     {
-        if (playersWaiting >= playersNeeded && Started = false)
+        if (Started == false)
         {
-            wall.SetActive(false);
-            Cage.SetActive(true);
-
-            for(int i = 0; i<GameObject.FindGameObjectsWithTag("Player").Length; i++)
+            if (playersWaiting >= playersNeeded)
             {
-                GameObject.FindGameObjectsWithTag("Player")[i].GetComponent<PlayerLocomotion>().boosts = 3;
-                GameObject.FindGameObjectsWithTag("Player")[i].GetComponent<PlayerLocomotion>().UpdateTrail();
+                wall.SetActive(false);
+                Cage.SetActive(true);
+
+                for (int i = 0; i < GameObject.FindGameObjectsWithTag("Player").Length; i++)
+                {
+                    GameObject.FindGameObjectsWithTag("Player")[i].GetComponent<PlayerLocomotion>().boosts = 3;
+                    GameObject.FindGameObjectsWithTag("Player")[i].GetComponent<PlayerLocomotion>().UpdateTrail();
+                }
+                Started = true;
             }
-            Started = true;
-        } 
+        }
     }
 }
