@@ -8,11 +8,11 @@ public class ReloadRace : MonoBehaviour
     public bool menu;
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag.Equals("Player") && !menu)
+        if (other.gameObject.tag.Equals("Player") && !menu || other.gameObject.tag.Equals("Player2") && !menu)
         {
             Scene scene = SceneManager.GetActiveScene(); 
             SceneManager.LoadScene(scene.name);
-        } else if (other.gameObject.tag.Equals("Player") && menu)
+        } else if (other.gameObject.tag.Equals("Player") && menu || other.gameObject.tag.Equals("Player") && menu)
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
         }
