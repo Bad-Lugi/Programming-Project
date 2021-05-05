@@ -8,14 +8,20 @@ public class PlayerTagChanger : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log(other.name);
+        if (this.GetComponent<StartingLine>().starter.Started == false)
+        {
+            Debug.Log(other.name);
             other.gameObject.layer = 13;
             playerOn = true;
+        }
     }
     private void OnTriggerExit(Collider other)
     {
-        Debug.Log(other.name);
+        if (this.GetComponent<StartingLine>().starter.Started == false)
+        {
+            Debug.Log(other.name);
             other.gameObject.layer = 12;
             playerOn = false;
+        }
     }
 }

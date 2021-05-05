@@ -12,23 +12,29 @@ public class StartingLine : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log(other.name);
-        if (!playerOn)
+        if (starter.Started == false)
         {
-            pl = other.GetComponent<PlayerLocomotion>();
-            pl.spawn = spawn;
-            playerOn = true;
-            starter.playersWaiting++;
+            Debug.Log(other.name);
+            if (!playerOn)
+            {
+                pl = other.GetComponent<PlayerLocomotion>();
+                pl.spawn = spawn;
+                playerOn = true;
+                starter.playersWaiting++;
+            }
         }
         
     }
     private void OnTriggerExit(Collider other)
     {
-        Debug.Log(other.name);
-        if (playerOn)
+        if (starter.Started == false)
         {
-            playerOn = false;
-            starter.playersWaiting--;
+            Debug.Log(other.name);
+            if (playerOn)
+            {
+                playerOn = false;
+                starter.playersWaiting--;
+            }
         }
     }
 }
