@@ -14,6 +14,7 @@ public class PlayerLocomotion : MonoBehaviour
     public int boosts = 3;
     public float boostvalue = 2;
     public ParticleSystem BoostParticles;
+    public float speedDebuff = 1;
 
     
     [Header("World Stuff")]
@@ -45,11 +46,19 @@ public class PlayerLocomotion : MonoBehaviour
 
         if (canMove)
         {
-            rb.velocity = new Vector3(moveInputX * speed * boost, rb.velocity.y, moveInputZ * speed * boost);
+            rb.velocity = new Vector3(moveInputX * speed * boost * speedDebuff, rb.velocity.y, moveInputZ * speed * boost * speedDebuff);
             if(boost > 1)
                 boost -= 0.1f;
             if (rb.mass > 2)
                 rb.mass -= 0.1f;
+            if (speedDebuff < 1)
+                speedDebuff += 0.001f;
+            if (boost < 1)
+                boost = 1f;
+            if (rb.mass < 2)
+                rb.mass = 2f;
+            if (speedDebuff > 1)
+                speedDebuff = 1f;
         }
         else
         {
