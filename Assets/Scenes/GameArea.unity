@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657832, g: 0.4964139, b: 0.57481974, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657874, g: 0.4964137, b: 0.57481897, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -641,8 +641,11 @@ MonoBehaviour:
   - {fileID: 2530400513882132708, guid: 1590ae6095c48254a846e5292f41961b, type: 3}
   - {fileID: 3674465914449499683, guid: fecce2817f2be234aabca3570b218817, type: 3}
   endRoom: {fileID: 1291424984120307827, guid: 31cc2c779daa0dc45ab85f63f8bfc0b0, type: 3}
+  checkpointRoom: {fileID: 3220729420848746118, guid: ad287e2e0b3ec0748a88b8633aaea410,
+    type: 3}
   numOfRooms: 0
   numofRoomsToLoad: 7
+  roomsBetweenCheckpoints: 1
 --- !u!4 &247145356
 Transform:
   m_ObjectHideFlags: 0
@@ -1783,7 +1786,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: 1.7673e-41, z: 0, w: -9.3125}
+  m_BoundingSphereOverride: {x: 0, y: 0, z: 3.128e-42, w: 5.9e-44}
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0

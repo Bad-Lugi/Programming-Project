@@ -4892,6 +4892,7 @@ GameObject:
   - component: {fileID: 3570415592899775102}
   - component: {fileID: 8496725119896268418}
   - component: {fileID: 7534000688898542932}
+  - component: {fileID: 8830985089228480588}
   m_Layer: 12
   m_Name: Player
   m_TagString: Player
@@ -5094,6 +5095,9 @@ MonoBehaviour:
   PlayerOneParticleMaterial: {fileID: 2100000, guid: e3d11660571f3824a877f6494f21f6dc,
     type: 2}
   CurrentSolidColor: {fileID: 2100000, guid: bfe276b3f486c3b469a4f26432b2b524, type: 2}
+  RainbowPlayerColor: {fileID: 2100000, guid: 481486752a1404ea99eb3e386a411002, type: 2}
+  RainbowParticleColor: {fileID: 2100000, guid: 3174c609af83a4f0fb9b2a5435d92fa7,
+    type: 2}
 --- !u!114 &8311760377329662706
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5122,6 +5126,7 @@ MonoBehaviour:
   boosts: 0
   boostvalue: 2.75
   BoostParticles: {fileID: 1193243103516527209}
+  speedDebuff: 1
   spawn: {fileID: 0}
   particles: {fileID: 7512099603805673710}
   canMove: 1
@@ -5248,7 +5253,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6953732151583953941}
   serializedVersion: 2
-  m_Mass: 0.5
+  m_Mass: 2
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 0
@@ -5256,6 +5261,18 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 116
   m_CollisionDetection: 0
+--- !u!114 &8830985089228480588
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6953732151583953941}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c7661d8f6a8bf4b29ae59163299dc7fd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7512099603805673710
 GameObject:
   m_ObjectHideFlags: 0

@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1377063342575601740}
   - component: {fileID: 2644620430830290921}
   - component: {fileID: 240770011691594531}
-  - component: {fileID: 2799295060996099841}
+  - component: {fileID: 2834042028461506241}
   m_Layer: 0
   m_Name: Spiky Block
   m_TagString: death
@@ -80,7 +80,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!64 &2799295060996099841
+--- !u!64 &2834042028461506241
 MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
