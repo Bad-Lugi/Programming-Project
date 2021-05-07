@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657832, g: 0.4964139, b: 0.57481974, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657874, g: 0.4964137, b: 0.57481897, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -645,7 +645,7 @@ MonoBehaviour:
     type: 3}
   numOfRooms: 0
   numofRoomsToLoad: 7
-  roomsBetweenCheckpoints: 3
+  roomsBetweenCheckpoints: 1
 --- !u!4 &247145356
 Transform:
   m_ObjectHideFlags: 0

@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Rendering;
 
 public class Powerups : MonoBehaviour
 {
@@ -17,56 +18,44 @@ public class Powerups : MonoBehaviour
         }
     }
 
-    public void SelectPowerUp(GameObject Player)
+public void SelectPowerUp(GameObject Player)
+    {  
+        switch (Random.Range(0,4))
+        {
+            case 0:
+                Debug.Log("rainbow");
+                rainbowColor();
+                break;
+            case 1:
+                Debug.Log("Add boosts");
+                AddBoosts();
+                break;
+            case 2:
+                Debug.Log("lv1 debuff");
+                PlayerSpeedDebuf(Player);
+                break;
+            case 3:
+                Debug.Log("Lv2 Debuf");
+                PlayerSpeedDebufStrong(Player);
+                break;
+            default:
+                Debug.Log("Death");
+                InstantDeath(Player);
+                break;
+        }
+        
+        
+    }
+    public void rainbowColor()
     {
-        Debug.Log(Player.gameObject.transform.position.x - this.gameObject.transform.position.x);
-        if (Player.gameObject.transform.position.x > this.gameObject.transform.position.x + 40)
-        {
-            switch (Random.Range(0, 3))
-            {
-                case 0:
-                    InstantDeath(Player);
-                    break;
-                case 1:
-                    PlayerSpeedDebufStrong(Player);
-                    break;
-                default:
-                    PlayerSpeedDebuf(Player);
-                    break;
-            }
-        }
-        else if (Player.gameObject.transform.position.x > this.gameObject.transform.position.x+20)
-        {
-            switch (Random.Range(0, 5))
-            {
-                case 0:
-                    InstantDeath(Player);
-                    break;
-                case 1:
-                    PlayerSpeedDebufStrong(Player);
-                    break;
-                default:
-                    PlayerSpeedDebuf(Player);
-                    break;
-            }
-        } else if (Player.gameObject.transform.position.x > this.gameObject.transform.position.x)
-        {
-            switch (Random.Range(0, 10))
-            {
-                case 0:
-                    InstantDeath(Player);
-                    break;
-                case 1:
-                    PlayerSpeedDebufStrong(Player);
-                    break;
-                default:
-                    PlayerSpeedDebuf(Player);
-                    break;
-            }
-        }else if (Player.gameObject.transform.position.x <= this.gameObject.transform.position.x)
-        {
-            PlayerSpeedDebuf(Player);
-        }
+        this.gameObject.GetComponent<ColorChanger>().RainbowColor();
+    }
+    public void AddBoosts()
+    {
+        int number = Random.Range(1, 3);
+        this.gameObject.GetComponent<PlayerLocomotion>().boosts += number;
+        this.gameObject.GetComponent<PlayerLocomotion>().UpdateTrail();
+        Debug.Log("Added " + number + " Boosts");
     }
     public void PlayerSpeedDebuf(GameObject Player)
     {
@@ -80,4 +69,5 @@ public class Powerups : MonoBehaviour
     {
         Player.GetComponent<PlayerLocomotion>().Death();
     }
+    
 }

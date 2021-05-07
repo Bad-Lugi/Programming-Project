@@ -5095,6 +5095,9 @@ MonoBehaviour:
   PlayerOneParticleMaterial: {fileID: 2100000, guid: e3d11660571f3824a877f6494f21f6dc,
     type: 2}
   CurrentSolidColor: {fileID: 2100000, guid: bfe276b3f486c3b469a4f26432b2b524, type: 2}
+  RainbowPlayerColor: {fileID: 2100000, guid: 481486752a1404ea99eb3e386a411002, type: 2}
+  RainbowParticleColor: {fileID: 2100000, guid: 3174c609af83a4f0fb9b2a5435d92fa7,
+    type: 2}
 --- !u!114 &8311760377329662706
 MonoBehaviour:
   m_ObjectHideFlags: 0

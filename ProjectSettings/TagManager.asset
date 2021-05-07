@@ -17,6 +17,8 @@ TagManager:
   - Mplayer
   - PColor
   - Player2
+  - PowerUp
+  - TempTag
   layers:
   - Default
   - TransparentFX

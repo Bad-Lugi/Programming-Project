@@ -9,6 +9,8 @@ public class ColorChanger : MonoBehaviour
     public Material PlayerOneSolidMaterial;
     public Material PlayerOneParticleMaterial;
     public Material CurrentSolidColor;
+    public Material RainbowPlayerColor;
+    public Material RainbowParticleColor;
 
     //PlaceHolder Material
     private Material mat;
@@ -56,5 +58,13 @@ public class ColorChanger : MonoBehaviour
             other.GetComponent<MeshRenderer>().material = mat;
         }
 
+    }
+    public void RainbowColor()
+    {
+        this.GetComponent<MeshRenderer>().material = RainbowPlayerColor;
+        for (int i = 0; i < GetComponentsInChildren<ParticleSystemRenderer>().Length; i++)
+        {
+            GetComponentsInChildren<ParticleSystemRenderer>()[i].material = RainbowParticleColor;
+        }
     }
 }
