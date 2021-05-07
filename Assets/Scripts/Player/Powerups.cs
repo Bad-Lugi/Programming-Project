@@ -20,7 +20,7 @@ public class Powerups : MonoBehaviour
 
 public void SelectPowerUp(GameObject Player)
     {  
-        switch (Random.Range(0,4))
+        switch (Random.Range(0,6))
         {
             case 0:
                 Debug.Log("rainbow");
@@ -37,6 +37,14 @@ public void SelectPowerUp(GameObject Player)
             case 3:
                 Debug.Log("Lv2 Debuf");
                 PlayerSpeedDebufStrong(Player);
+                break;
+            case 4:
+                Debug.Log("Death");
+                InstantDeath(Player);
+                break;
+            case 5:
+                Debug.Log("Swap");
+                SwapPos(Player);
                 break;
             default:
                 Debug.Log("Death");
@@ -68,6 +76,14 @@ public void SelectPowerUp(GameObject Player)
     public void InstantDeath(GameObject Player)
     {
         Player.GetComponent<PlayerLocomotion>().Death();
+    }
+    public void SwapPos(GameObject Player)
+    {
+        Vector3 thisplayer = this.gameObject.transform.position;
+        this.gameObject.transform.position = new Vector3(-Player.gameObject.transform.position.x, this.gameObject.transform.position.y, Player.gameObject.transform.position.z);
+        this.gameObject.GetComponent<JellyMesh>().spawn(this.transform);
+        Player.gameObject.transform.position = new Vector3(-thisplayer.x, this.gameObject.transform.position.y, thisplayer.z);
+        Player.gameObject.GetComponent<JellyMesh>().spawn(Player.transform);
     }
     
 }
