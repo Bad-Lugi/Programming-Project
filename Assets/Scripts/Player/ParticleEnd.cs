@@ -5,11 +5,13 @@ using UnityEngine;
 public class ParticleEnd : MonoBehaviour
 {
     public PlayerLocomotion pl;
-
+    public bool respawn;
     private void OnParticleSystemStopped()
     {
         Debug.Log("Stopped");
-        pl.Respawn();
+        if(!respawn)
+            pl.Respawn();
+        this.GetComponentInChildren<ParticleEnd>().respawn = false;
     }
 
 
