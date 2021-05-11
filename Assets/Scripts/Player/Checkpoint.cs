@@ -8,7 +8,7 @@ public class Checkpoint : MonoBehaviour
     public Transform spawn;
     private void OnTriggerEnter(Collider other)
     {
-        pl = other.GetComponent<PlayerLocomotion>();
+        pl = other.gameObject.GetComponent<PlayerLocomotion>();
         pl.spawn = spawn;
     }
 }

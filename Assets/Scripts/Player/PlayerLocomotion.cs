@@ -30,7 +30,7 @@ public class PlayerLocomotion : MonoBehaviour
     private float moveInputX;
     private float moveInputZ;
 
-
+    private float boostTimer;
 
     private void Start()
     {
@@ -40,7 +40,20 @@ public class PlayerLocomotion : MonoBehaviour
         boosts = 3;
         UpdateTrail();
     }
-    
+    private void Update()
+    {
+        if(boosts < 3)
+        {
+            boostTimer += Time.deltaTime;
+        }
+        if (boostTimer >= 5)
+        {
+            boosts++;
+            boostTimer = 0;
+            UpdateTrail();
+            Debug.Log("Boost");
+        }
+    }
     private void FixedUpdate()
     {
 
