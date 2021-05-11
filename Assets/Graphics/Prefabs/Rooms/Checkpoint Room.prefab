@@ -151,6 +151,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1368207470411442579}
+  - {fileID: 3220729421617410711}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -278,7 +279,7 @@ Transform:
   m_LocalScale: {x: 0.2, y: 0.5, z: 5}
   m_Children: []
   m_Father: {fileID: 3220729420848746117}
-  m_RootOrder: 3
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &3220729421617410708
 MeshFilter:
@@ -530,7 +531,7 @@ GameObject:
   - component: {fileID: 5765793302640876719}
   m_Layer: 0
   m_Name: Cube (1)
-  m_TagString: Untagged
+  m_TagString: CheckPoint
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -669,7 +670,7 @@ GameObject:
   - component: {fileID: 6215849893492210685}
   m_Layer: 0
   m_Name: Cube
-  m_TagString: Untagged
+  m_TagString: CheckPoint
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
