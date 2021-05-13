@@ -2,12 +2,17 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Rendering;
+using UnityEngine.UI;
 
 public class Powerups : MonoBehaviour
 {
     private GameObject[] Players;
     public GameObject SpinObject;
 
+    private void Awake()
+    {
+        SpinObject = GameObject.FindGameObjectWithTag("Spin");
+    }
     private void OnTriggerEnter(Collider other)
     {
         if(other.gameObject.tag.Equals("PowerUp"))
@@ -80,7 +85,8 @@ public void SelectPowerUp(GameObject Player)
     }
     public void StartSwapPos(GameObject Player)
     {
-        SpinObject.SetActive(true);
+        SpinObject.GetComponent<Animator>().enabled = true;
+        SpinObject.GetComponent<RawImage>().enabled = true;
         SpinObject.GetComponent<SwapEvent>().player = this.gameObject;
         SpinObject.GetComponent<SwapEvent>().OtherPlayer = Player;
     }
