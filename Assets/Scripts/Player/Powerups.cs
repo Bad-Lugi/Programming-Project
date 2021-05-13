@@ -45,7 +45,7 @@ public void SelectPowerUp(GameObject Player)
                 break;
             case 5:
                 Debug.Log("Swap");
-                SwapPos(Player);
+                StartSwapPos(Player);
                 break;
             default:
                 Debug.Log("Death");
