@@ -57,9 +57,10 @@ public class ColorChanger : MonoBehaviour
                 GetComponentsInChildren<ParticleSystemRenderer>()[i].material = other.GetComponent<MeshRenderer>().material;
             }
             other.GetComponent<MeshRenderer>().material = mat;
+            this.GetComponentInChildren<ParticleEnd>().respawn = true;
+            this.GetComponentInChildren<ParticleSystem>().Play();
         }
-        this.GetComponentInChildren<ParticleEnd>().respawn = true;
-        this.GetComponentInChildren<ParticleSystem>().Play();
+        
     }
     public void RainbowColor()
     {

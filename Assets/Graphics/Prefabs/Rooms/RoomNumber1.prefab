@@ -645,6 +645,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: pencil
       objectReference: {fileID: 0}
+    - target: {fileID: 5553584729582059559, guid: 2c519af8a5390de489f724b5954028aa,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 6539906520278835939, guid: 2c519af8a5390de489f724b5954028aa,
         type: 3}
       propertyPath: m_LocalPosition.y
