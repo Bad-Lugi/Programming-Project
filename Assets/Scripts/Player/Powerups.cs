@@ -6,6 +6,7 @@ using UnityEngine.Rendering;
 public class Powerups : MonoBehaviour
 {
     private GameObject[] Players;
+    public GameObject SpinObject;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -77,13 +78,11 @@ public void SelectPowerUp(GameObject Player)
     {
         Player.GetComponent<PlayerLocomotion>().Death();
     }
-    public void SwapPos(GameObject Player)
+    public void StartSwapPos(GameObject Player)
     {
-        Vector3 thisplayer = this.gameObject.transform.position;
-        this.gameObject.transform.position = new Vector3(-Player.gameObject.transform.position.x, this.gameObject.transform.position.y, Player.gameObject.transform.position.z);
-        this.gameObject.GetComponent<JellyMesh>().spawn(this.transform);
-        Player.gameObject.transform.position = new Vector3(-thisplayer.x, this.gameObject.transform.position.y, thisplayer.z);
-        Player.gameObject.GetComponent<JellyMesh>().spawn(Player.transform);
+        SpinObject.SetActive(true);
+        SpinObject.GetComponent<SwapEvent>().player = this.gameObject;
+        SpinObject.GetComponent<SwapEvent>().OtherPlayer = Player;
     }
     
 }
