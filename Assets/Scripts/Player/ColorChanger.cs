@@ -36,6 +36,7 @@ public class ColorChanger : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
+
         if (other.tag == "Color")
         {
             mat = this.GetComponent<MeshRenderer>().material;
@@ -56,8 +57,10 @@ public class ColorChanger : MonoBehaviour
                 GetComponentsInChildren<ParticleSystemRenderer>()[i].material = other.GetComponent<MeshRenderer>().material;
             }
             other.GetComponent<MeshRenderer>().material = mat;
+            this.GetComponentInChildren<ParticleEnd>().respawn = true;
+            this.GetComponentInChildren<ParticleSystem>().Play();
         }
-
+        
     }
     public void RainbowColor()
     {
