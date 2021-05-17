@@ -9,11 +9,14 @@ public class Powerups : MonoBehaviour
     private GameObject[] Players;
     public GameObject SpinObject;
     public GameObject ZapObject;
+    public GameObject DebuffObject;
 
     private void Awake()
     {
         SpinObject = GameObject.FindGameObjectWithTag("Spin");
         ZapObject = GameObject.FindGameObjectWithTag("Zap");
+        ZapObject = GameObject.FindGameObjectWithTag("");
+        DebuffObject = GameObject.FindGameObjectWithTag("Debuff");
     }
     private void OnTriggerEnter(Collider other)
     {
@@ -76,10 +79,14 @@ public void SelectPowerUp(GameObject Player)
     public void PlayerSpeedDebuf(GameObject Player)
     {
         Player.GetComponent<PlayerLocomotion>().speedDebuff = 0.5f;
+        DebuffObject.GetComponent<Animator>().enabled = true;
+        DebuffObject.GetComponent<RawImage>().enabled = true;
     }
     public void PlayerSpeedDebufStrong(GameObject Player)
     {
         Player.GetComponent<PlayerLocomotion>().speedDebuff = 0f;
+        DebuffObject.GetComponent<Animator>().enabled = true;
+        DebuffObject.GetComponent<RawImage>().enabled = true;
     }
     public void Zap(GameObject Player)
     {
@@ -97,14 +104,20 @@ public void SelectPowerUp(GameObject Player)
     public void YouDie(GameObject Player)
     {
         this.gameObject.GetComponent<PlayerLocomotion>().Death();
+        ZapObject.GetComponent<Animator>().enabled = true;
+        ZapObject.GetComponent<RawImage>().enabled = true;
     }
     public void YouSpeedDebuff(GameObject Player)
     {
         this.gameObject.GetComponent<PlayerLocomotion>().speedDebuff = 0.5f;
+        DebuffObject.GetComponent<Animator>().enabled = true;
+        DebuffObject.GetComponent<RawImage>().enabled = true;
     }
     public void YouSpeedDebuffStrong(GameObject Player)
     {
         this.gameObject.GetComponent<PlayerLocomotion>().speedDebuff = 0f;
+        DebuffObject.GetComponent<Animator>().enabled = true;
+        DebuffObject.GetComponent<RawImage>().enabled = true;
     }
 
 }
