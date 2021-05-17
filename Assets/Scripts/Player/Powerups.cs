@@ -94,5 +94,17 @@ public void SelectPowerUp(GameObject Player)
         SpinObject.GetComponent<SwapEvent>().player = this.gameObject;
         SpinObject.GetComponent<SwapEvent>().OtherPlayer = Player;
     }
-    
+    public void YouDie(GameObject Player)
+    {
+        this.gameObject.GetComponent<PlayerLocomotion>().Death();
+    }
+    public void YouSpeedDebuff(GameObject Player)
+    {
+        this.gameObject.GetComponent<PlayerLocomotion>().speedDebuff = 0.5f;
+    }
+    public void YouSpeedDebuffStrong(GameObject Player)
+    {
+        this.gameObject.GetComponent<PlayerLocomotion>().speedDebuff = 0f;
+    }
+
 }
