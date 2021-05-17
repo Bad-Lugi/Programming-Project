@@ -2,12 +2,19 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Rendering;
+using UnityEngine.UI;
 
 public class Powerups : MonoBehaviour
 {
     private GameObject[] Players;
     public GameObject SpinObject;
+    public GameObject ZapObject;
 
+    private void Awake()
+    {
+        SpinObject = GameObject.FindGameObjectWithTag("Spin");
+        SpinObject = GameObject.FindGameObjectWithTag("Zap");
+    }
     private void OnTriggerEnter(Collider other)
     {
         if(other.gameObject.tag.Equals("PowerUp"))
@@ -41,7 +48,7 @@ public void SelectPowerUp(GameObject Player)
                 break;
             case 4:
                 Debug.Log("Death");
-                InstantDeath(Player);
+                Zap(Player);
                 break;
             case 5:
                 Debug.Log("Swap");
@@ -49,7 +56,7 @@ public void SelectPowerUp(GameObject Player)
                 break;
             default:
                 Debug.Log("Death");
-                InstantDeath(Player);
+                Zap(Player);
                 break;
         }
         
@@ -74,13 +81,16 @@ public void SelectPowerUp(GameObject Player)
     {
         Player.GetComponent<PlayerLocomotion>().speedDebuff = 0f;
     }
-    public void InstantDeath(GameObject Player)
+    public void Zap(GameObject Player)
     {
-        Player.GetComponent<PlayerLocomotion>().Death();
+        ZapObject.GetComponent<Animator>().enabled = true;
+        ZapObject.GetComponent<RawImage>().enabled = true;
+        ZapObject.GetComponent<SwapEvent>().player = Player;
     }
     public void StartSwapPos(GameObject Player)
     {
-        SpinObject.SetActive(true);
+        SpinObject.GetComponent<Animator>().enabled = true;
+        SpinObject.GetComponent<RawImage>().enabled = true;
         SpinObject.GetComponent<SwapEvent>().player = this.gameObject;
         SpinObject.GetComponent<SwapEvent>().OtherPlayer = Player;
     }
