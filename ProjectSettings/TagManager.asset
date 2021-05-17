@@ -20,6 +20,8 @@ TagManager:
   - PowerUp
   - TempTag
   - CheckPoint
+  - Spin
+  - Zap
   layers:
   - Default
   - TransparentFX

@@ -8,10 +8,12 @@ public class Powerups : MonoBehaviour
 {
     private GameObject[] Players;
     public GameObject SpinObject;
+    public GameObject ZapObject;
 
     private void Awake()
     {
         SpinObject = GameObject.FindGameObjectWithTag("Spin");
+        ZapObject = GameObject.FindGameObjectWithTag("Zap");
     }
     private void OnTriggerEnter(Collider other)
     {
@@ -46,7 +48,7 @@ public void SelectPowerUp(GameObject Player)
                 break;
             case 4:
                 Debug.Log("Death");
-                InstantDeath(Player);
+                Zap(Player);
                 break;
             case 5:
                 Debug.Log("Swap");
@@ -54,7 +56,7 @@ public void SelectPowerUp(GameObject Player)
                 break;
             default:
                 Debug.Log("Death");
-                InstantDeath(Player);
+                Zap(Player);
                 break;
         }
         
@@ -79,9 +81,11 @@ public void SelectPowerUp(GameObject Player)
     {
         Player.GetComponent<PlayerLocomotion>().speedDebuff = 0f;
     }
-    public void InstantDeath(GameObject Player)
+    public void Zap(GameObject Player)
     {
         Player.GetComponent<PlayerLocomotion>().Death();
+        ZapObject.GetComponent<Animator>().enabled = true;
+        ZapObject.GetComponent<RawImage>().enabled = true;
     }
     public void StartSwapPos(GameObject Player)
     {
