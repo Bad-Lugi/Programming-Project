@@ -2563,6 +2563,7 @@ GameObject:
   - component: {fileID: 996779626}
   - component: {fileID: 996779630}
   - component: {fileID: 996779629}
+  - component: {fileID: 996779627}
   - component: {fileID: 996779628}
   m_Layer: 5
   m_Name: Zap
@@ -2590,6 +2591,18 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &996779627
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 996779625}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ee1ead35e1781c4ba8bdda76e7ba30d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!95 &996779628
 Animator:
   serializedVersion: 3
@@ -2598,9 +2611,9 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 996779625}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 9666d650f97386a4b88cb29d54131f83, type: 2}
+  m_Controller: {fileID: 9100000, guid: a72dcf5894b475747af9345d4388ed11, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -3162,7 +3175,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e46d08cef6ea4f499c26d6b6d99f146, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  arrows: {fileID: 0}
   player: {fileID: 0}
   OtherPlayer: {fileID: 0}
 --- !u!95 &1425632556

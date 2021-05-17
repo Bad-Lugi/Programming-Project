@@ -5,7 +5,6 @@ using UnityEngine.UI;
 
 public class SwapEvent : MonoBehaviour
 {
-    public GameObject arrows;
     public GameObject player;
     public GameObject OtherPlayer;
     public void Hide()

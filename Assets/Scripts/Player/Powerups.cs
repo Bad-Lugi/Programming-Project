@@ -13,7 +13,7 @@ public class Powerups : MonoBehaviour
     private void Awake()
     {
         SpinObject = GameObject.FindGameObjectWithTag("Spin");
-        SpinObject = GameObject.FindGameObjectWithTag("Zap");
+        ZapObject = GameObject.FindGameObjectWithTag("Zap");
     }
     private void OnTriggerEnter(Collider other)
     {
@@ -83,9 +83,9 @@ public void SelectPowerUp(GameObject Player)
     }
     public void Zap(GameObject Player)
     {
+        Player.GetComponent<PlayerLocomotion>().Death();
         ZapObject.GetComponent<Animator>().enabled = true;
         ZapObject.GetComponent<RawImage>().enabled = true;
-        ZapObject.GetComponent<SwapEvent>().player = Player;
     }
     public void StartSwapPos(GameObject Player)
     {
